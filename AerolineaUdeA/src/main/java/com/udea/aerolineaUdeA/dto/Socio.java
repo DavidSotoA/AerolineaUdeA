@@ -1,10 +1,12 @@
 package com.udea.aerolineaUdeA.dto;
 
 import java.io.Serializable;
+import javax.xml.bind.annotation.XmlRootElement;
 
 public class Socio implements Serializable {
     private int id;
     private String token;
+    private String username;
     private String nombre;
     private String contraseña;
     private String apellidos;
@@ -14,8 +16,9 @@ public class Socio implements Serializable {
     private String tarjeta_de_credito;
     private int numero_de_millas;
 
-    public Socio(int id,String token, String nombre,String contraseña, String apellidos, String fecha_nacimiento, String movil, String correo_electronico, String tarjeta_de_credito, int numero_de_millas) {
+    public Socio(int id,String username, String token, String nombre,String contraseña, String apellidos, String fecha_nacimiento, String movil, String correo_electronico, String tarjeta_de_credito, int numero_de_millas) {
         this.id = id;
+        this.username=username;
         this.token=token;
         this.nombre = nombre;
         this.apellidos = apellidos;
@@ -26,7 +29,8 @@ public class Socio implements Serializable {
         this.numero_de_millas = numero_de_millas;
     }
 
-    public Socio(String nombre, String contraseña, String apellidos, String fecha_nacimiento, String movil, String correo_electronico, String tarjeta_de_credito, int numero_de_millas) {
+    public Socio(String username,String nombre, String contraseña, String apellidos, String fecha_nacimiento, String movil, String correo_electronico, String tarjeta_de_credito) {
+        this.username=username;
         this.nombre = nombre;
         this.contraseña = contraseña;
         this.apellidos = apellidos;
@@ -34,10 +38,17 @@ public class Socio implements Serializable {
         this.movil = movil;
         this.correo_electronico = correo_electronico;
         this.tarjeta_de_credito = tarjeta_de_credito;
-        this.numero_de_millas = numero_de_millas;
     }
     
     
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
     public String getToken() {
         return token;
