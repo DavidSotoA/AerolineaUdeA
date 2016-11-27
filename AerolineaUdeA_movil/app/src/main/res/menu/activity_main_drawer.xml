@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:checkableBehavior="single"
+        android:id="@+id/items"
+        >
+        <item
+            android:id="@+id/nav_sesion" />
+
+        <item
+            android:id="@+id/nav_registro"
+            android:icon="@drawable/ic_registro"
+            android:title="Registrarse" />
+
+        <item
+            android:id="@+id/nav_actualizarInfo"
+            android:icon="@drawable/ic_update"
+            android:title="Actualizar informacion" />
+    </group>
+
+
+    <group
+            android:checkableBehavior="single"
+            android:id="@+id/items2">
+        <item android:title="Sobre nosotros">
+                <item
+                    android:id="@+id/nav_share"
+                    android:icon="@drawable/ic_menu_share"
+                    android:title="Desarrolladores" />
+                <item
+                    android:id="@+id/nav_send"
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="Contactanos" />
+
+        </item>
+    </group>
+</menu>
